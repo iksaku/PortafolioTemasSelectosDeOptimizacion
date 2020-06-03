@@ -73,4 +73,22 @@ def parse_file(file_name: str) -> Method:
         return MLP(clients, trips, capacity, demand, service_time, extra_data)
 
 
-model = parse_file('MT-DMP10s0-01.txt')
+for file in [
+    'VRPNC1m',
+    'VRPNC2m',
+    'VRPNC3m',
+    'VRPNC4m',
+    'VRPNC5m',
+    'VRPNC11m',
+    'VRPNC12m',
+    'MT-DMP10s0-01',
+    'MT-DMP10s0-05',
+    'MT-DMP15s0-03',
+    'MT-DMP15s0-04'
+]:
+    method = parse_file(file + '.txt')
+
+    if isinstance(method, MTVRP):
+        print('File \'' + file + '\' corresponds to method MTVRP')
+    else:
+        print('File \'' + file + '\' corresponds to method MLP')
