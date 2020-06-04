@@ -84,7 +84,6 @@ class MTVRP(Method):
 
             self.report(
                 current.name + '\t->\t' + next.name +
-                '\t|\tDistance: ' + str(current.distance_to(next)) + '\n'
                 '\t|\tCapacity: ' + str(prev_capacity) + ' - ' + str(next.demand) +
                 ' -> ' + str(capacity) + ' ' + ('✔️' if capacity >= 0 else '❌')
             )
@@ -116,7 +115,6 @@ class MTVRP(Method):
                             capacity = virtual_capacity
                             self.report(
                                 current.name + '\t->\t' + candidate.name +
-                                '\t|\tDistance: ' + str(current.distance_to(candidate)) + '\n'
                                 '\t|\tCapacity: ' + str(prev_capacity) + ' - ' + str(candidate.demand) +
                                 ' -> ' + str(capacity) + ' ' + ('✔️' if capacity >= 0 else '❌')
                             )
@@ -130,8 +128,7 @@ class MTVRP(Method):
                 trips += 1
                 capacity = self.capacity
                 current = deposit
-                self.report(prev.name + '\t->\t' + current.name +
-                            '\t|\tDistance: ' + str(current.distance_to(next)) + '\n')
+                self.report(prev.name + '\t->\t' + current.name + '\n')
 
         total_distance = 0
         for i in range(0, trips):

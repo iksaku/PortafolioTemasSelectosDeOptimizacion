@@ -1,267 +1,142 @@
-Elapsed Time: 0.012765553000000013 seconds
+Elapsed Time: 0.02057044799999999 seconds
 Expected Trips: 7
 Actual Trips: 7
 Total Distance: 9849.605214794312
 
-Deposit		->	Client 8	|	Distance: 0.0
-	|	Capacity: 200 - 19 -> 181 ✔️
-Client 8	->	Client 120	|	Distance: 0.0
-	|	Capacity: 181 - 13 -> 168 ✔️
-Client 120	->	Client 85	|	Distance: 1.0
-	|	Capacity: 168 - 8 -> 160 ✔️
-Client 85	->	Client 86	|	Distance: 0.0
-	|	Capacity: 160 - 11 -> 149 ✔️
-Client 86	->	Client 12	|	Distance: 1.0
-	|	Capacity: 149 - 17 -> 132 ✔️
-Client 12	->	Client 88	|	Distance: 0.0
-	|	Capacity: 132 - 4 -> 128 ✔️
-Client 88	->	Client 111	|	Distance: 0.0
-	|	Capacity: 128 - 7 -> 121 ✔️
-Client 111	->	Client 84	|	Distance: 1.0
-	|	Capacity: 121 - 10 -> 111 ✔️
-Client 84	->	Client 112	|	Distance: 1.0
-	|	Capacity: 111 - 8 -> 103 ✔️
-Client 112	->	Client 82	|	Distance: 1.0
-	|	Capacity: 103 - 12 -> 91 ✔️
-Client 82	->	Client 113	|	Distance: 1.0
-	|	Capacity: 91 - 11 -> 80 ✔️
-Client 113	->	Client 117	|	Distance: 0.0
-	|	Capacity: 80 - 7 -> 73 ✔️
-Client 117	->	Client 83	|	Distance: 1.0
-	|	Capacity: 73 - 11 -> 62 ✔️
-Client 83	->	Client 13	|	Distance: 1.7320508075688772
-	|	Capacity: 62 - 13 -> 49 ✔️
-Client 13	->	Client 81	|	Distance: 0.0
-	|	Capacity: 49 - 7 -> 42 ✔️
-Client 81	->	Client 119	|	Distance: 0.0
-	|	Capacity: 42 - 20 -> 22 ✔️
-Client 119	->	Client 7	|	Distance: 1.4142135623730951
-	|	Capacity: 22 - 11 -> 11 ✔️
-Client 7	->	Client 9	|	Distance: 1.0
-	|	Capacity: 11 - 5 -> 6 ✔️
-Client 9	->	Client 14	|	Distance: 0.0
-	|	Capacity: 6 - 12 -> -6 ❌
-Client 9	->	Client 6	|	Distance: 1.0
-	|	Capacity: 6 - 5 -> 1 ✔️
-Client 9	->	Deposit		|	Distance: 3.605551275463989
+Deposit		->	Client 8	|	Capacity: 200 - 19 -> 181 ✔️
+Client 8	->	Client 120	|	Capacity: 181 - 13 -> 168 ✔️
+Client 120	->	Client 85	|	Capacity: 168 - 8 -> 160 ✔️
+Client 85	->	Client 86	|	Capacity: 160 - 11 -> 149 ✔️
+Client 86	->	Client 12	|	Capacity: 149 - 17 -> 132 ✔️
+Client 12	->	Client 88	|	Capacity: 132 - 4 -> 128 ✔️
+Client 88	->	Client 111	|	Capacity: 128 - 7 -> 121 ✔️
+Client 111	->	Client 84	|	Capacity: 121 - 10 -> 111 ✔️
+Client 84	->	Client 112	|	Capacity: 111 - 8 -> 103 ✔️
+Client 112	->	Client 82	|	Capacity: 103 - 12 -> 91 ✔️
+Client 82	->	Client 113	|	Capacity: 91 - 11 -> 80 ✔️
+Client 113	->	Client 117	|	Capacity: 80 - 7 -> 73 ✔️
+Client 117	->	Client 83	|	Capacity: 73 - 11 -> 62 ✔️
+Client 83	->	Client 13	|	Capacity: 62 - 13 -> 49 ✔️
+Client 13	->	Client 81	|	Capacity: 49 - 7 -> 42 ✔️
+Client 81	->	Client 119	|	Capacity: 42 - 20 -> 22 ✔️
+Client 119	->	Client 7	|	Capacity: 22 - 11 -> 11 ✔️
+Client 7	->	Client 9	|	Capacity: 11 - 5 -> 6 ✔️
+Client 9	->	Client 14	|	Capacity: 6 - 12 -> -6 ❌
+Client 9	->	Client 6	|	Capacity: 6 - 5 -> 1 ✔️
+Client 9	->	Deposit	
 
-Deposit		->	Client 87	|	Distance: 1.4142135623730951
-	|	Capacity: 200 - 21 -> 179 ✔️
-Client 87	->	Client 89	|	Distance: 1.0
-	|	Capacity: 179 - 15 -> 164 ✔️
-Client 89	->	Client 92	|	Distance: 1.0
-	|	Capacity: 164 - 16 -> 148 ✔️
-Client 92	->	Client 91	|	Distance: 1.0
-	|	Capacity: 148 - 4 -> 144 ✔️
-Client 91	->	Client 118	|	Distance: 0.0
-	|	Capacity: 144 - 4 -> 140 ✔️
-Client 118	->	Client 18	|	Distance: 0.0
-	|	Capacity: 140 - 12 -> 128 ✔️
-Client 18	->	Client 90	|	Distance: 0.0
-	|	Capacity: 128 - 16 -> 112 ✔️
-Client 90	->	Client 95	|	Distance: 1.0
-	|	Capacity: 112 - 9 -> 103 ✔️
-Client 95	->	Client 108	|	Distance: 0.0
-	|	Capacity: 103 - 12 -> 91 ✔️
-Client 108	->	Client 114	|	Distance: 1.0
-	|	Capacity: 91 - 13 -> 78 ✔️
-Client 114	->	Client 93	|	Distance: 1.4142135623730951
-	|	Capacity: 78 - 7 -> 71 ✔️
-Client 93	->	Client 105	|	Distance: 0.0
-	|	Capacity: 71 - 8 -> 63 ✔️
-Client 105	->	Client 102	|	Distance: 0.0
-	|	Capacity: 63 - 11 -> 52 ✔️
-Client 102	->	Client 96	|	Distance: 1.0
-	|	Capacity: 52 - 11 -> 41 ✔️
-Client 96	->	Client 106	|	Distance: 1.0
-	|	Capacity: 41 - 6 -> 35 ✔️
-Client 106	->	Client 94	|	Distance: 0.0
-	|	Capacity: 35 - 10 -> 25 ✔️
-Client 94	->	Client 101	|	Distance: 1.0
-	|	Capacity: 25 - 9 -> 16 ✔️
-Client 101	->	Client 107	|	Distance: 1.7320508075688772
-	|	Capacity: 16 - 5 -> 11 ✔️
-Client 107	->	Client 99	|	Distance: 0.0
-	|	Capacity: 11 - 11 -> 0 ✔️
-Client 99	->	Deposit		|	Distance: 3.872983346207417
+Deposit		->	Client 87	|	Capacity: 200 - 21 -> 179 ✔️
+Client 87	->	Client 89	|	Capacity: 179 - 15 -> 164 ✔️
+Client 89	->	Client 92	|	Capacity: 164 - 16 -> 148 ✔️
+Client 92	->	Client 91	|	Capacity: 148 - 4 -> 144 ✔️
+Client 91	->	Client 118	|	Capacity: 144 - 4 -> 140 ✔️
+Client 118	->	Client 18	|	Capacity: 140 - 12 -> 128 ✔️
+Client 18	->	Client 90	|	Capacity: 128 - 16 -> 112 ✔️
+Client 90	->	Client 95	|	Capacity: 112 - 9 -> 103 ✔️
+Client 95	->	Client 108	|	Capacity: 103 - 12 -> 91 ✔️
+Client 108	->	Client 114	|	Capacity: 91 - 13 -> 78 ✔️
+Client 114	->	Client 93	|	Capacity: 78 - 7 -> 71 ✔️
+Client 93	->	Client 105	|	Capacity: 71 - 8 -> 63 ✔️
+Client 105	->	Client 102	|	Capacity: 63 - 11 -> 52 ✔️
+Client 102	->	Client 96	|	Capacity: 52 - 11 -> 41 ✔️
+Client 96	->	Client 106	|	Capacity: 41 - 6 -> 35 ✔️
+Client 106	->	Client 94	|	Capacity: 35 - 10 -> 25 ✔️
+Client 94	->	Client 101	|	Capacity: 25 - 9 -> 16 ✔️
+Client 101	->	Client 107	|	Capacity: 16 - 5 -> 11 ✔️
+Client 107	->	Client 99	|	Capacity: 11 - 11 -> 0 ✔️
+Client 99	->	Deposit	
 
-Deposit		->	Client 14	|	Distance: 3.605551275463989
-	|	Capacity: 200 - 12 -> 188 ✔️
-Client 14	->	Client 10	|	Distance: 1.4142135623730951
-	|	Capacity: 188 - 15 -> 173 ✔️
-Client 10	->	Client 11	|	Distance: 0.0
-	|	Capacity: 173 - 15 -> 158 ✔️
-Client 11	->	Client 15	|	Distance: 1.0
-	|	Capacity: 158 - 18 -> 140 ✔️
-Client 15	->	Client 5	|	Distance: 1.0
-	|	Capacity: 140 - 14 -> 126 ✔️
-Client 5	->	Client 4	|	Distance: 1.0
-	|	Capacity: 126 - 6 -> 120 ✔️
-Client 4	->	Client 3	|	Distance: 1.0
-	|	Capacity: 120 - 13 -> 107 ✔️
-Client 3	->	Client 2	|	Distance: 2.8284271247461903
-	|	Capacity: 107 - 7 -> 100 ✔️
-Client 2	->	Client 1	|	Distance: 1.4142135623730951
-	|	Capacity: 100 - 25 -> 75 ✔️
-Client 1	->	Client 97	|	Distance: 6.6332495807108
-	|	Capacity: 75 - 17 -> 58 ✔️
-Client 97	->	Client 104	|	Distance: 1.0
-	|	Capacity: 58 - 7 -> 51 ✔️
-Client 104	->	Client 109	|	Distance: 0.0
-	|	Capacity: 51 - 13 -> 38 ✔️
-Client 109	->	Client 100	|	Distance: 1.4142135623730951
-	|	Capacity: 38 - 7 -> 31 ✔️
-Client 100	->	Client 103	|	Distance: 1.4142135623730951
-	|	Capacity: 31 - 12 -> 19 ✔️
-Client 103	->	Client 115	|	Distance: 1.0
-	|	Capacity: 19 - 11 -> 8 ✔️
-Client 115	->	Client 116	|	Distance: 1.0
-	|	Capacity: 8 - 10 -> -2 ❌
-Client 115	->	Client 110	|	Distance: 2.0
-	|	Capacity: 8 - 7 -> 1 ✔️
-Client 115	->	Deposit		|	Distance: 4.69041575982343
+Deposit		->	Client 14	|	Capacity: 200 - 12 -> 188 ✔️
+Client 14	->	Client 10	|	Capacity: 188 - 15 -> 173 ✔️
+Client 10	->	Client 11	|	Capacity: 173 - 15 -> 158 ✔️
+Client 11	->	Client 15	|	Capacity: 158 - 18 -> 140 ✔️
+Client 15	->	Client 5	|	Capacity: 140 - 14 -> 126 ✔️
+Client 5	->	Client 4	|	Capacity: 126 - 6 -> 120 ✔️
+Client 4	->	Client 3	|	Capacity: 120 - 13 -> 107 ✔️
+Client 3	->	Client 2	|	Capacity: 107 - 7 -> 100 ✔️
+Client 2	->	Client 1	|	Capacity: 100 - 25 -> 75 ✔️
+Client 1	->	Client 97	|	Capacity: 75 - 17 -> 58 ✔️
+Client 97	->	Client 104	|	Capacity: 58 - 7 -> 51 ✔️
+Client 104	->	Client 109	|	Capacity: 51 - 13 -> 38 ✔️
+Client 109	->	Client 100	|	Capacity: 38 - 7 -> 31 ✔️
+Client 100	->	Client 103	|	Capacity: 31 - 12 -> 19 ✔️
+Client 103	->	Client 115	|	Capacity: 19 - 11 -> 8 ✔️
+Client 115	->	Client 116	|	Capacity: 8 - 10 -> -2 ❌
+Client 115	->	Client 110	|	Capacity: 8 - 7 -> 1 ✔️
+Client 115	->	Deposit	
 
-Deposit		->	Client 116	|	Distance: 4.69041575982343
-	|	Capacity: 200 - 10 -> 190 ✔️
-Client 116	->	Client 16	|	Distance: 1.4142135623730951
-	|	Capacity: 190 - 13 -> 177 ✔️
-Client 16	->	Client 22	|	Distance: 1.4142135623730951
-	|	Capacity: 177 - 12 -> 165 ✔️
-Client 22	->	Client 17	|	Distance: 0.0
-	|	Capacity: 165 - 18 -> 147 ✔️
-Client 17	->	Client 24	|	Distance: 1.0
-	|	Capacity: 147 - 8 -> 139 ✔️
-Client 24	->	Client 19	|	Distance: 0.0
-	|	Capacity: 139 - 17 -> 122 ✔️
-Client 19	->	Client 25	|	Distance: 1.4142135623730951
-	|	Capacity: 122 - 16 -> 106 ✔️
-Client 25	->	Client 27	|	Distance: 1.0
-	|	Capacity: 106 - 6 -> 100 ✔️
-Client 27	->	Client 98	|	Distance: 0.0
-	|	Capacity: 100 - 12 -> 88 ✔️
-Client 98	->	Client 20	|	Distance: 1.0
-	|	Capacity: 88 - 4 -> 84 ✔️
-Client 20	->	Client 33	|	Distance: 0.0
-	|	Capacity: 84 - 7 -> 77 ✔️
-Client 33	->	Client 30	|	Distance: 1.0
-	|	Capacity: 77 - 11 -> 66 ✔️
-Client 30	->	Client 23	|	Distance: 0.0
-	|	Capacity: 66 - 13 -> 53 ✔️
-Client 23	->	Client 28	|	Distance: 1.4142135623730951
-	|	Capacity: 53 - 5 -> 48 ✔️
-Client 28	->	Client 21	|	Distance: 0.0
-	|	Capacity: 48 - 7 -> 41 ✔️
-Client 21	->	Client 31	|	Distance: 0.0
-	|	Capacity: 41 - 10 -> 31 ✔️
-Client 31	->	Client 26	|	Distance: 1.0
-	|	Capacity: 31 - 15 -> 16 ✔️
-Client 26	->	Client 34	|	Distance: 1.4142135623730951
-	|	Capacity: 16 - 2 -> 14 ✔️
-Client 34	->	Client 32	|	Distance: 1.0
-	|	Capacity: 14 - 3 -> 11 ✔️
-Client 32	->	Client 35	|	Distance: 0.0
-	|	Capacity: 11 - 4 -> 7 ✔️
-Client 35	->	Client 36	|	Distance: 1.0
-	|	Capacity: 7 - 4 -> 3 ✔️
-Client 36	->	Client 29	|	Distance: 3.3166247903554
-	|	Capacity: 3 - 9 -> -6 ❌
-Client 36	->	Client 79	|	Distance: 6.782329983125268
-	|	Capacity: 3 - 3 -> 0 ✔️
-Client 36	->	Deposit		|	Distance: 7.0710678118654755
+Deposit		->	Client 116	|	Capacity: 200 - 10 -> 190 ✔️
+Client 116	->	Client 16	|	Capacity: 190 - 13 -> 177 ✔️
+Client 16	->	Client 22	|	Capacity: 177 - 12 -> 165 ✔️
+Client 22	->	Client 17	|	Capacity: 165 - 18 -> 147 ✔️
+Client 17	->	Client 24	|	Capacity: 147 - 8 -> 139 ✔️
+Client 24	->	Client 19	|	Capacity: 139 - 17 -> 122 ✔️
+Client 19	->	Client 25	|	Capacity: 122 - 16 -> 106 ✔️
+Client 25	->	Client 27	|	Capacity: 106 - 6 -> 100 ✔️
+Client 27	->	Client 98	|	Capacity: 100 - 12 -> 88 ✔️
+Client 98	->	Client 20	|	Capacity: 88 - 4 -> 84 ✔️
+Client 20	->	Client 33	|	Capacity: 84 - 7 -> 77 ✔️
+Client 33	->	Client 30	|	Capacity: 77 - 11 -> 66 ✔️
+Client 30	->	Client 23	|	Capacity: 66 - 13 -> 53 ✔️
+Client 23	->	Client 28	|	Capacity: 53 - 5 -> 48 ✔️
+Client 28	->	Client 21	|	Capacity: 48 - 7 -> 41 ✔️
+Client 21	->	Client 31	|	Capacity: 41 - 10 -> 31 ✔️
+Client 31	->	Client 26	|	Capacity: 31 - 15 -> 16 ✔️
+Client 26	->	Client 34	|	Capacity: 16 - 2 -> 14 ✔️
+Client 34	->	Client 32	|	Capacity: 14 - 3 -> 11 ✔️
+Client 32	->	Client 35	|	Capacity: 11 - 4 -> 7 ✔️
+Client 35	->	Client 36	|	Capacity: 7 - 4 -> 3 ✔️
+Client 36	->	Client 29	|	Capacity: 3 - 9 -> -6 ❌
+Client 36	->	Client 79	|	Capacity: 3 - 3 -> 0 ✔️
+Client 36	->	Deposit	
 
-Deposit		->	Client 29	|	Distance: 7.0710678118654755
-	|	Capacity: 200 - 9 -> 191 ✔️
-Client 29	->	Client 69	|	Distance: 3.872983346207417
-	|	Capacity: 191 - 14 -> 177 ✔️
-Client 69	->	Client 67	|	Distance: 0.0
-	|	Capacity: 177 - 17 -> 160 ✔️
-Client 67	->	Client 70	|	Distance: 1.4142135623730951
-	|	Capacity: 160 - 16 -> 144 ✔️
-Client 70	->	Client 37	|	Distance: 2.23606797749979
-	|	Capacity: 144 - 18 -> 126 ✔️
-Client 37	->	Client 73	|	Distance: 1.4142135623730951
-	|	Capacity: 126 - 9 -> 117 ✔️
-Client 73	->	Client 71	|	Distance: 1.0
-	|	Capacity: 117 - 7 -> 110 ✔️
-Client 71	->	Client 68	|	Distance: 0.0
-	|	Capacity: 110 - 13 -> 97 ✔️
-Client 68	->	Client 38	|	Distance: 0.0
-	|	Capacity: 97 - 14 -> 83 ✔️
-Client 38	->	Client 76	|	Distance: 1.0
-	|	Capacity: 83 - 5 -> 78 ✔️
-Client 76	->	Client 39	|	Distance: 1.0
-	|	Capacity: 78 - 12 -> 66 ✔️
-Client 39	->	Client 41	|	Distance: 0.0
-	|	Capacity: 66 - 20 -> 46 ✔️
-Client 41	->	Client 74	|	Distance: 1.0
-	|	Capacity: 46 - 11 -> 35 ✔️
-Client 74	->	Client 44	|	Distance: 1.0
-	|	Capacity: 35 - 10 -> 25 ✔️
-Client 44	->	Client 72	|	Distance: 1.0
-	|	Capacity: 25 - 13 -> 12 ✔️
-Client 72	->	Client 42	|	Distance: 0.0
-	|	Capacity: 12 - 14 -> -2 ❌
-Client 72	->	Client 46	|	Distance: 1.0
-	|	Capacity: 12 - 11 -> 1 ✔️
-Client 72	->	Deposit		|	Distance: 8.94427190999916
+Deposit		->	Client 29	|	Capacity: 200 - 9 -> 191 ✔️
+Client 29	->	Client 69	|	Capacity: 191 - 14 -> 177 ✔️
+Client 69	->	Client 67	|	Capacity: 177 - 17 -> 160 ✔️
+Client 67	->	Client 70	|	Capacity: 160 - 16 -> 144 ✔️
+Client 70	->	Client 37	|	Capacity: 144 - 18 -> 126 ✔️
+Client 37	->	Client 73	|	Capacity: 126 - 9 -> 117 ✔️
+Client 73	->	Client 71	|	Capacity: 117 - 7 -> 110 ✔️
+Client 71	->	Client 68	|	Capacity: 110 - 13 -> 97 ✔️
+Client 68	->	Client 38	|	Capacity: 97 - 14 -> 83 ✔️
+Client 38	->	Client 76	|	Capacity: 83 - 5 -> 78 ✔️
+Client 76	->	Client 39	|	Capacity: 78 - 12 -> 66 ✔️
+Client 39	->	Client 41	|	Capacity: 66 - 20 -> 46 ✔️
+Client 41	->	Client 74	|	Capacity: 46 - 11 -> 35 ✔️
+Client 74	->	Client 44	|	Capacity: 35 - 10 -> 25 ✔️
+Client 44	->	Client 72	|	Capacity: 25 - 13 -> 12 ✔️
+Client 72	->	Client 42	|	Capacity: 12 - 14 -> -2 ❌
+Client 72	->	Client 46	|	Capacity: 12 - 11 -> 1 ✔️
+Client 72	->	Deposit	
 
-Deposit		->	Client 42	|	Distance: 8.94427190999916
-	|	Capacity: 200 - 14 -> 186 ✔️
-Client 42	->	Client 77	|	Distance: 0.0
-	|	Capacity: 186 - 28 -> 158 ✔️
-Client 77	->	Client 75	|	Distance: 0.0
-	|	Capacity: 158 - 35 -> 123 ✔️
-Client 75	->	Client 49	|	Distance: 1.7320508075688772
-	|	Capacity: 123 - 5 -> 118 ✔️
-Client 49	->	Client 47	|	Distance: 0.0
-	|	Capacity: 118 - 7 -> 111 ✔️
-Client 47	->	Client 78	|	Distance: 0.0
-	|	Capacity: 111 - 7 -> 104 ✔️
-Client 78	->	Client 40	|	Distance: 1.4142135623730951
-	|	Capacity: 104 - 17 -> 87 ✔️
-Client 40	->	Client 43	|	Distance: 1.0
-	|	Capacity: 87 - 16 -> 71 ✔️
-Client 43	->	Client 48	|	Distance: 1.0
-	|	Capacity: 71 - 13 -> 58 ✔️
-Client 48	->	Client 45	|	Distance: 1.4142135623730951
-	|	Capacity: 58 - 9 -> 49 ✔️
-Client 45	->	Client 80	|	Distance: 0.0
-	|	Capacity: 49 - 10 -> 39 ✔️
-Client 80	->	Client 50	|	Distance: 1.0
-	|	Capacity: 39 - 4 -> 35 ✔️
-Client 50	->	Client 51	|	Distance: 2.0
-	|	Capacity: 35 - 21 -> 14 ✔️
-Client 51	->	Client 52	|	Distance: 3.7416573867739413
-	|	Capacity: 14 - 13 -> 1 ✔️
-Client 52	->	Client 53	|	Distance: 1.7320508075688772
-	|	Capacity: 1 - 11 -> -10 ❌
-Client 52	->	Deposit		|	Distance: 10.535653752852738
+Deposit		->	Client 42	|	Capacity: 200 - 14 -> 186 ✔️
+Client 42	->	Client 77	|	Capacity: 186 - 28 -> 158 ✔️
+Client 77	->	Client 75	|	Capacity: 158 - 35 -> 123 ✔️
+Client 75	->	Client 49	|	Capacity: 123 - 5 -> 118 ✔️
+Client 49	->	Client 47	|	Capacity: 118 - 7 -> 111 ✔️
+Client 47	->	Client 78	|	Capacity: 111 - 7 -> 104 ✔️
+Client 78	->	Client 40	|	Capacity: 104 - 17 -> 87 ✔️
+Client 40	->	Client 43	|	Capacity: 87 - 16 -> 71 ✔️
+Client 43	->	Client 48	|	Capacity: 71 - 13 -> 58 ✔️
+Client 48	->	Client 45	|	Capacity: 58 - 9 -> 49 ✔️
+Client 45	->	Client 80	|	Capacity: 49 - 10 -> 39 ✔️
+Client 80	->	Client 50	|	Capacity: 39 - 4 -> 35 ✔️
+Client 50	->	Client 51	|	Capacity: 35 - 21 -> 14 ✔️
+Client 51	->	Client 52	|	Capacity: 14 - 13 -> 1 ✔️
+Client 52	->	Client 53	|	Capacity: 1 - 11 -> -10 ❌
+Client 52	->	Deposit	
 
-Deposit		->	Client 53	|	Distance: 10.535653752852738
-	|	Capacity: 200 - 11 -> 189 ✔️
-Client 53	->	Client 54	|	Distance: 0.0
-	|	Capacity: 189 - 12 -> 177 ✔️
-Client 54	->	Client 57	|	Distance: 1.0
-	|	Capacity: 177 - 8 -> 169 ✔️
-Client 57	->	Client 59	|	Distance: 0.0
-	|	Capacity: 169 - 19 -> 150 ✔️
-Client 59	->	Client 55	|	Distance: 1.7320508075688772
-	|	Capacity: 150 - 14 -> 136 ✔️
-Client 55	->	Client 58	|	Distance: 1.7320508075688772
-	|	Capacity: 136 - 16 -> 120 ✔️
-Client 58	->	Client 56	|	Distance: 1.0
-	|	Capacity: 120 - 10 -> 110 ✔️
-Client 56	->	Client 61	|	Distance: 1.0
-	|	Capacity: 110 - 17 -> 93 ✔️
-Client 61	->	Client 65	|	Distance: 0.0
-	|	Capacity: 93 - 17 -> 76 ✔️
-Client 65	->	Client 62	|	Distance: 1.4142135623730951
-	|	Capacity: 76 - 7 -> 69 ✔️
-Client 62	->	Client 60	|	Distance: 1.0
-	|	Capacity: 69 - 5 -> 64 ✔️
-Client 60	->	Client 64	|	Distance: 1.4142135623730951
-	|	Capacity: 64 - 14 -> 50 ✔️
-Client 64	->	Client 63	|	Distance: 1.4142135623730951
-	|	Capacity: 50 - 16 -> 34 ✔️
-Client 63	->	Client 66	|	Distance: 2.449489742783178
-	|	Capacity: 34 - 13 -> 21 ✔️
+Deposit		->	Client 53	|	Capacity: 200 - 11 -> 189 ✔️
+Client 53	->	Client 54	|	Capacity: 189 - 12 -> 177 ✔️
+Client 54	->	Client 57	|	Capacity: 177 - 8 -> 169 ✔️
+Client 57	->	Client 59	|	Capacity: 169 - 19 -> 150 ✔️
+Client 59	->	Client 55	|	Capacity: 150 - 14 -> 136 ✔️
+Client 55	->	Client 58	|	Capacity: 136 - 16 -> 120 ✔️
+Client 58	->	Client 56	|	Capacity: 120 - 10 -> 110 ✔️
+Client 56	->	Client 61	|	Capacity: 110 - 17 -> 93 ✔️
+Client 61	->	Client 65	|	Capacity: 93 - 17 -> 76 ✔️
+Client 65	->	Client 62	|	Capacity: 76 - 7 -> 69 ✔️
+Client 62	->	Client 60	|	Capacity: 69 - 5 -> 64 ✔️
+Client 60	->	Client 64	|	Capacity: 64 - 14 -> 50 ✔️
+Client 64	->	Client 63	|	Capacity: 50 - 16 -> 34 ✔️
+Client 63	->	Client 66	|	Capacity: 34 - 13 -> 21 ✔️
