@@ -1,0 +1,17 @@
+Elapsed Time: 0.0016433989999999898 seconds
+Expected Trips: 2
+Actual Trips: 2
+Total Distance: 1528
+
+Deposit		->	Client 3	|	Capacity: 120 - 30 -> 90 ✔️
+Client 3	->	Client 1	|	Capacity: 90 - 10 -> 80 ✔️
+Client 1	->	Client 2	|	Capacity: 80 - 20 -> 60 ✔️
+Client 2	->	Client 8	|	Capacity: 60 - 30 -> 30 ✔️
+Client 8	->	Client 9	|	Capacity: 30 - 30 -> 0 ✔️
+Client 9	->	Deposit	
+
+Deposit		->	Client 10	|	Capacity: 120 - 30 -> 90 ✔️
+Client 10	->	Client 4	|	Capacity: 90 - 10 -> 80 ✔️
+Client 4	->	Client 5	|	Capacity: 80 - 20 -> 60 ✔️
+Client 5	->	Client 6	|	Capacity: 60 - 10 -> 50 ✔️
+Client 6	->	Client 7	|	Capacity: 50 - 20 -> 30 ✔️

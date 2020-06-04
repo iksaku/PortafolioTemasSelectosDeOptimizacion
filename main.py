@@ -1,6 +1,6 @@
 from __future__ import annotations
 from clients import ClientWithDistance, ClientWithPosition
-from methods import BaseMethod, MTVRP, MLP
+from methods import BaseMethod, MTVRP
 from pathlib import Path
 import os
 import re
@@ -11,7 +11,7 @@ def parse_file(file_name: str) -> BaseMethod:
     path = 'tests/' + file_name
 
     if not os.path.exists(path):
-        raise FileNotFoundError('[Error] No se ha encontrado el archivo '" + file_name + "' en la carpeta \'tests/\'')
+        raise FileNotFoundError('[Error] No se ha encontrado el archivo \'' + file_name + '\' en la carpeta \'tests/\'')
 
     with open(path, mode='r') as file:
         data = file.readlines()
@@ -41,30 +41,25 @@ def parse_file(file_name: str) -> BaseMethod:
 
             extra_data.append(extra)
 
-        if isinstance(extra_data[0], ClientWithPosition):
-            return MTVRP(clients, trips, capacity, demand, service_time, extra_data)
-
-        return MLP(clients, trips, capacity, demand, service_time, extra_data)
+        return MTVRP(clients, trips, capacity, demand, service_time, extra_data)
 
 
 Path('results').mkdir(exist_ok=True)
 
 for file_name in [
+    'MT-DMP10s0-01',
+    'MT-DMP10s0-05',
+    'MT-DMP15s0-03',
+    'MT-DMP15s0-04',
     'VRPNC1m',
     'VRPNC2m',
     'VRPNC3m',
     'VRPNC4m',
     'VRPNC5m',
     'VRPNC11m',
-    'VRPNC12m',
-    'MT-DMP10s0-01',
-    'MT-DMP10s0-05',
-    'MT-DMP15s0-03',
-    'MT-DMP15s0-04'
+    'VRPNC12m'
 ]:
     file_name += '.txt'
-    if file_name[0] == 'M':
-        break
 
     start = time.process_time()
 

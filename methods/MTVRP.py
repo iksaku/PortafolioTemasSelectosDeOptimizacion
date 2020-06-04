@@ -1,11 +1,11 @@
 from typing import Dict, List, Tuple
-from clients import ClientWithPosition
+from clients import BaseClient
 from . import BaseMethod
 
 
 class MTVRP(BaseMethod):
     def __init__(self, clients: int, trips: int, capacity: int, demands: List[int], service_time: List[int],
-                 client_positions: List[ClientWithPosition]):
+                 client_positions: List[BaseClient]):
         super().__init__(clients, trips, capacity, demands, service_time)
         self.client_positions = client_positions
 
@@ -14,7 +14,7 @@ class MTVRP(BaseMethod):
         deposit = clients.pop(0)
 
         # Start at Deposit
-        current: ClientWithPosition = deposit
+        current: BaseClient = deposit
 
         trips = 1
         distances: Dict[int, List[Tuple[int, float]]] = {}
@@ -26,7 +26,7 @@ class MTVRP(BaseMethod):
             clients = sorted(clients, key=lambda c: current.distance_to(c))
 
             # Specify that the next travel position is the client with lower distance
-            next: ClientWithPosition = clients[0]
+            next: BaseClient = clients[0]
 
             prev_capacity = capacity
             capacity -= next.demand
