@@ -1,4 +1,4 @@
-Elapsed Time: 0.02057044799999999 seconds
+Elapsed Time: 0.015244750000000001 seconds
 Expected Trips: 7
 Actual Trips: 7
 Total Distance: 9849.605214794312
