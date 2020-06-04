@@ -1,5 +1,6 @@
 import os
 import re
+import math
 from typing import List
 
 
@@ -27,8 +28,26 @@ class MTVRP(Method):
         super().__init__(clients, trips, capacity, demands, service_time)
         self.client_positions = client_positions
 
+    @staticmethod
+    def distance(a: Position, b: Position) -> float:
+        return math.sqrt(abs((a.x - b.x) + (a.y - b.y)))
+
     def run(self):
-        pass
+        clients = self.client_positions
+        deposit = clients.pop(0)
+
+        # Start at Deposit
+        current = deposit
+        while len(clients) > 0:
+            # Sort clients by distance to current position
+            clients = sorted(clients, key=lambda c: self.distance(current, c), reverse=True)
+
+            # Specify that the next travel position is the client with lower distance
+            next = clients.pop()
+
+            # TODO: Get demand, but need to use a client id or something in the position
+
+            # TODO: "next" is converted to "current" once we calculate demand against capacity of vehicle
 
 
 class MLP(Method):
