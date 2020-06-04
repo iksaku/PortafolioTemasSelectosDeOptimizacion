@@ -1,4 +1,4 @@
-Elapsed Time: 0.0008709140000000004 seconds
+Elapsed Time: 0.0008677620000000219 seconds
 Expected Trips: 2
 Actual Trips: 2
 Total Distance: 2052
@@ -10,7 +10,7 @@ Client 5	->	Client 3	|	Capacity: 70 - 20 -> 50 ✔️
 Client 3	->	Client 8	|	Capacity: 50 - 30 -> 20 ✔️
 Client 8	->	Client 7	|	Capacity: 20 - 30 -> -10 ❌
 Client 8	->	Client 10	|	Capacity: 20 - 20 -> 0 ✔️
-Client 8	->	Deposit	
+Client 10	->	Deposit	
 
 Deposit		->	Client 7	|	Capacity: 120 - 30 -> 90 ✔️
 Client 7	->	Client 6	|	Capacity: 90 - 30 -> 60 ✔️

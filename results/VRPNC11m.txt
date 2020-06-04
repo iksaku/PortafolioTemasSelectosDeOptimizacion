@@ -1,4 +1,4 @@
-Elapsed Time: 0.01833759999999998 seconds
+Elapsed Time: 0.014579183999999995 seconds
 Expected Trips: 7
 Actual Trips: 7
 Total Distance: 9849.605214794312
@@ -23,7 +23,7 @@ Client 119	->	Client 7	|	Capacity: 22 - 11 -> 11 ✔️
 Client 7	->	Client 9	|	Capacity: 11 - 5 -> 6 ✔️
 Client 9	->	Client 14	|	Capacity: 6 - 12 -> -6 ❌
 Client 9	->	Client 6	|	Capacity: 6 - 5 -> 1 ✔️
-Client 9	->	Deposit	
+Client 6	->	Deposit	
 
 Deposit		->	Client 87	|	Capacity: 200 - 21 -> 179 ✔️
 Client 87	->	Client 89	|	Capacity: 179 - 15 -> 164 ✔️
@@ -63,7 +63,7 @@ Client 100	->	Client 103	|	Capacity: 31 - 12 -> 19 ✔️
 Client 103	->	Client 115	|	Capacity: 19 - 11 -> 8 ✔️
 Client 115	->	Client 116	|	Capacity: 8 - 10 -> -2 ❌
 Client 115	->	Client 110	|	Capacity: 8 - 7 -> 1 ✔️
-Client 115	->	Deposit	
+Client 110	->	Deposit	
 
 Deposit		->	Client 116	|	Capacity: 200 - 10 -> 190 ✔️
 Client 116	->	Client 16	|	Capacity: 190 - 13 -> 177 ✔️
@@ -88,7 +88,7 @@ Client 32	->	Client 35	|	Capacity: 11 - 4 -> 7 ✔️
 Client 35	->	Client 36	|	Capacity: 7 - 4 -> 3 ✔️
 Client 36	->	Client 29	|	Capacity: 3 - 9 -> -6 ❌
 Client 36	->	Client 79	|	Capacity: 3 - 3 -> 0 ✔️
-Client 36	->	Deposit	
+Client 79	->	Deposit	
 
 Deposit		->	Client 29	|	Capacity: 200 - 9 -> 191 ✔️
 Client 29	->	Client 69	|	Capacity: 191 - 14 -> 177 ✔️
@@ -107,7 +107,7 @@ Client 74	->	Client 44	|	Capacity: 35 - 10 -> 25 ✔️
 Client 44	->	Client 72	|	Capacity: 25 - 13 -> 12 ✔️
 Client 72	->	Client 42	|	Capacity: 12 - 14 -> -2 ❌
 Client 72	->	Client 46	|	Capacity: 12 - 11 -> 1 ✔️
-Client 72	->	Deposit	
+Client 46	->	Deposit	
 
 Deposit		->	Client 42	|	Capacity: 200 - 14 -> 186 ✔️
 Client 42	->	Client 77	|	Capacity: 186 - 28 -> 158 ✔️

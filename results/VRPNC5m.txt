@@ -1,4 +1,4 @@
-Elapsed Time: 0.04774709799999999 seconds
+Elapsed Time: 0.039088917 seconds
 Expected Trips: 17
 Actual Trips: 16
 Total Distance: 27247.820370420024
@@ -20,7 +20,7 @@ Client 40	->	Client 48	|	Capacity: 16 - 36 -> -20 ❌
 Client 40	->	Client 56	|	Capacity: 16 - 6 -> 10 ✔️
 Client 56	->	Client 36	|	Capacity: 10 - 5 -> 5 ✔️
 Client 36	->	Client 146	|	Capacity: 5 - 5 -> 0 ✔️
-Client 40	->	Deposit	
+Client 146	->	Deposit	
 
 Deposit		->	Client 110	|	Capacity: 200 - 5 -> 195 ✔️
 Client 110	->	Client 67	|	Capacity: 195 - 25 -> 170 ✔️
@@ -35,7 +35,7 @@ Client 19	->	Client 26	|	Capacity: 32 - 17 -> 15 ✔️
 Client 26	->	Client 4	|	Capacity: 15 - 19 -> -4 ❌
 Client 26	->	Client 88	|	Capacity: 15 - 9 -> 6 ✔️
 Client 88	->	Client 69	|	Capacity: 6 - 6 -> 0 ✔️
-Client 26	->	Deposit	
+Client 69	->	Deposit	
 
 Deposit		->	Client 4	|	Capacity: 200 - 19 -> 181 ✔️
 Client 4	->	Client 155	|	Capacity: 181 - 21 -> 160 ✔️
@@ -52,7 +52,7 @@ Client 148	->	Client 175	|	Capacity: 18 - 14 -> 4 ✔️
 Client 175	->	Client 55	|	Capacity: 4 - 2 -> 2 ✔️
 Client 55	->	Client 46	|	Capacity: 2 - 1 -> 1 ✔️
 Client 46	->	Client 91	|	Capacity: 1 - 1 -> 0 ✔️
-Client 148	->	Deposit	
+Client 91	->	Deposit	
 
 Deposit		->	Client 168	|	Capacity: 200 - 13 -> 187 ✔️
 Client 168	->	Client 197	|	Capacity: 187 - 19 -> 168 ✔️
@@ -66,7 +66,7 @@ Client 82	->	Client 58	|	Capacity: 23 - 18 -> 5 ✔️
 Client 58	->	Client 152	|	Capacity: 5 - 26 -> -21 ❌
 Client 58	->	Client 6	|	Capacity: 5 - 3 -> 2 ✔️
 Client 6	->	Client 92	|	Capacity: 2 - 2 -> 0 ✔️
-Client 58	->	Deposit	
+Client 92	->	Deposit	
 
 Deposit		->	Client 152	|	Capacity: 200 - 26 -> 174 ✔️
 Client 152	->	Client 73	|	Capacity: 174 - 9 -> 165 ✔️
@@ -93,7 +93,7 @@ Client 111	->	Client 31	|	Capacity: 37 - 27 -> 10 ✔️
 Client 31	->	Client 132	|	Capacity: 10 - 12 -> -2 ❌
 Client 31	->	Client 25	|	Capacity: 10 - 6 -> 4 ✔️
 Client 25	->	Client 90	|	Capacity: 4 - 3 -> 1 ✔️
-Client 31	->	Deposit	
+Client 90	->	Deposit	
 
 Deposit		->	Client 132	|	Capacity: 200 - 12 -> 188 ✔️
 Client 132	->	Client 109	|	Capacity: 188 - 11 -> 177 ✔️
@@ -110,7 +110,7 @@ Client 101	->	Client 177	|	Capacity: 31 - 17 -> 14 ✔️
 Client 177	->	Client 1	|	Capacity: 14 - 10 -> 4 ✔️
 Client 1	->	Client 10	|	Capacity: 4 - 16 -> -12 ❌
 Client 1	->	Client 24	|	Capacity: 4 - 3 -> 1 ✔️
-Client 1	->	Deposit	
+Client 24	->	Deposit	
 
 Deposit		->	Client 38	|	Capacity: 200 - 6 -> 194 ✔️
 Client 38	->	Client 133	|	Capacity: 194 - 23 -> 171 ✔️
@@ -128,7 +128,7 @@ Client 60	->	Client 83	|	Capacity: 17 - 11 -> 6 ✔️
 Client 83	->	Client 178	|	Capacity: 6 - 29 -> -23 ❌
 Client 83	->	Client 117	|	Capacity: 6 - 3 -> 3 ✔️
 Client 117	->	Client 17	|	Capacity: 3 - 2 -> 1 ✔️
-Client 83	->	Deposit	
+Client 17	->	Deposit	
 
 Deposit		->	Client 178	|	Capacity: 200 - 29 -> 171 ✔️
 Client 178	->	Client 199	|	Capacity: 171 - 5 -> 166 ✔️
@@ -144,7 +144,7 @@ Client 104	->	Client 97	|	Capacity: 34 - 12 -> 22 ✔️
 Client 97	->	Client 87	|	Capacity: 22 - 26 -> -4 ❌
 Client 97	->	Client 144	|	Capacity: 22 - 16 -> 6 ✔️
 Client 144	->	Client 173	|	Capacity: 6 - 6 -> 0 ✔️
-Client 97	->	Deposit	
+Client 173	->	Deposit	
 
 Deposit		->	Client 10	|	Capacity: 200 - 16 -> 184 ✔️
 Client 10	->	Client 189	|	Capacity: 184 - 16 -> 168 ✔️
@@ -175,7 +175,7 @@ Client 93	->	Client 37	|	Capacity: 22 - 8 -> 14 ✔️
 Client 37	->	Client 98	|	Capacity: 14 - 10 -> 4 ✔️
 Client 98	->	Client 172	|	Capacity: 4 - 12 -> -8 ❌
 Client 98	->	Client 78	|	Capacity: 4 - 3 -> 1 ✔️
-Client 98	->	Deposit	
+Client 78	->	Deposit	
 
 Deposit		->	Client 126	|	Capacity: 200 - 7 -> 193 ✔️
 Client 126	->	Client 68	|	Capacity: 193 - 36 -> 157 ✔️
@@ -191,7 +191,7 @@ Client 158	->	Client 30	|	Capacity: 39 - 21 -> 18 ✔️
 Client 30	->	Client 121	|	Capacity: 18 - 8 -> 10 ✔️
 Client 121	->	Client 32	|	Capacity: 10 - 23 -> -13 ❌
 Client 121	->	Client 185	|	Capacity: 10 - 10 -> 0 ✔️
-Client 121	->	Deposit	
+Client 185	->	Deposit	
 
 Deposit		->	Client 172	|	Capacity: 200 - 12 -> 188 ✔️
 Client 172	->	Client 85	|	Capacity: 188 - 41 -> 147 ✔️
@@ -222,7 +222,7 @@ Client 81	->	Client 20	|	Capacity: 30 - 9 -> 21 ✔️
 Client 20	->	Client 128	|	Capacity: 21 - 14 -> 7 ✔️
 Client 128	->	Client 169	|	Capacity: 7 - 15 -> -8 ❌
 Client 128	->	Client 136	|	Capacity: 7 - 6 -> 1 ✔️
-Client 128	->	Deposit	
+Client 136	->	Deposit	
 
 Deposit		->	Client 169	|	Capacity: 200 - 15 -> 185 ✔️
 Client 169	->	Client 188	|	Capacity: 185 - 24 -> 161 ✔️
@@ -234,7 +234,7 @@ Client 164	->	Client 34	|	Capacity: 70 - 14 -> 56 ✔️
 Client 34	->	Client 161	|	Capacity: 56 - 37 -> 19 ✔️
 Client 161	->	Client 66	|	Capacity: 19 - 25 -> -6 ❌
 Client 161	->	Client 71	|	Capacity: 19 - 15 -> 4 ✔️
-Client 161	->	Deposit	
+Client 71	->	Deposit	
 
 Deposit		->	Client 141	|	Capacity: 200 - 27 -> 173 ✔️
 Client 141	->	Client 43	|	Capacity: 173 - 7 -> 166 ✔️

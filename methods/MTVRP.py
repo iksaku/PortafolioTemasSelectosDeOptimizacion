@@ -48,8 +48,6 @@ class MTVRP(BaseMethod):
 
             # If vehicle has no more stock, make a trip back to deposit and recalculate next route
             if capacity <= 0:
-                prev = current
-
                 # Exceeds stock, maybe we could try to extra look for other client
                 if capacity < 0:
                     # Restore demand to look somewhere else
@@ -76,8 +74,8 @@ class MTVRP(BaseMethod):
 
                 trips += 1
                 capacity = self.capacity
+                self.report(current.name + '\t->\t' + deposit.name + '\n')
                 current = deposit
-                self.report(prev.name + '\t->\t' + current.name + '\n')
 
         total_distance = 0
         for i in range(0, trips):

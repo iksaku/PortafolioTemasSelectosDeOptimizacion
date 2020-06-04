@@ -1,4 +1,4 @@
-Elapsed Time: 0.006699419999999998 seconds
+Elapsed Time: 0.004781473000000008 seconds
 Expected Trips: 5
 Actual Trips: 5
 Total Distance: 2618.416203703307
@@ -16,7 +16,7 @@ Client 27	->	Client 7	|	Capacity: 40 - 19 -> 21 ✔️
 Client 7	->	Client 38	|	Capacity: 21 - 15 -> 6 ✔️
 Client 38	->	Client 48	|	Capacity: 6 - 17 -> -11 ❌
 Client 38	->	Client 29	|	Capacity: 6 - 6 -> 0 ✔️
-Client 38	->	Deposit	
+Client 29	->	Deposit	
 
 Deposit		->	Client 12	|	Capacity: 160 - 29 -> 131 ✔️
 Client 12	->	Client 24	|	Capacity: 131 - 10 -> 121 ✔️
@@ -29,7 +29,7 @@ Client 15	->	Client 17	|	Capacity: 33 - 3 -> 30 ✔️
 Client 17	->	Client 18	|	Capacity: 30 - 41 -> -11 ❌
 Client 17	->	Client 45	|	Capacity: 30 - 10 -> 20 ✔️
 Client 45	->	Client 44	|	Capacity: 20 - 16 -> 4 ✔️
-Client 17	->	Deposit	
+Client 44	->	Deposit	
 
 Deposit		->	Client 48	|	Capacity: 160 - 17 -> 143 ✔️
 Client 48	->	Client 11	|	Capacity: 143 - 19 -> 124 ✔️
