@@ -1,9 +1,9 @@
 from __future__ import annotations
-from typing import List
 from pathlib import Path
+from typing import Dict, List, Tuple
+import math
 import os
 import re
-import math
 import time
 
 
@@ -50,7 +50,7 @@ class Method:
     def get_report(self) -> str:
         return self._report
 
-    def run(self) -> int:
+    def run(self) -> tuple:
         pass
 
 
@@ -60,8 +60,7 @@ class MTVRP(Method):
         super().__init__(clients, trips, capacity, demands, service_time)
         self.client_positions = client_positions
 
-    def run(self) -> int:
-        report = ''
+    def run(self) -> tuple:
         clients = self.client_positions
         deposit = clients.pop(0)
 
@@ -69,8 +68,11 @@ class MTVRP(Method):
         current: ClientWithPosition = deposit
 
         trips = 1
+        distances: Dict[int, List[Tuple[int, float]]] = {}
         capacity = self.capacity
         while len(clients) > 0:
+            k = trips - 1
+
             # Sort clients by distance to current position
             clients = sorted(clients, key=lambda c: current.distance_to(c))
 
@@ -82,12 +84,18 @@ class MTVRP(Method):
 
             self.report(
                 current.name + '\t->\t' + next.name +
+                '\t|\tDistance: ' + str(current.distance_to(next)) + '\n'
                 '\t|\tCapacity: ' + str(prev_capacity) + ' - ' + str(next.demand) +
                 ' -> ' + str(capacity) + ' ' + ('✔️' if capacity >= 0 else '❌')
             )
 
             # If vehicle didn't exceed stock, remove client from pending list
             if capacity >= 0:
+                if k not in distances:
+                    distances[k] = []
+
+                distances[k].append((len(clients), current.distance_to(next)))
+
                 current = clients.pop(0)
 
             # If vehicle has no more stock, make a trip back to deposit and recalculate next route
@@ -106,20 +114,31 @@ class MTVRP(Method):
                         if virtual_capacity >= 0:
                             prev_capacity = capacity
                             capacity = virtual_capacity
-                            clients.remove(candidate)
                             self.report(
                                 current.name + '\t->\t' + candidate.name +
+                                '\t|\tDistance: ' + str(current.distance_to(candidate)) + '\n'
                                 '\t|\tCapacity: ' + str(prev_capacity) + ' - ' + str(candidate.demand) +
                                 ' -> ' + str(capacity) + ' ' + ('✔️' if capacity >= 0 else '❌')
                             )
+                            distances[k].append((len(clients), current.distance_to(candidate)))
+                            clients.remove(candidate)
                             current = candidate
+
+                if len(clients) > 0:
+                    distances[k].append((len(clients), current.distance_to(deposit)))
 
                 trips += 1
                 capacity = self.capacity
                 current = deposit
-                self.report(prev.name + '\t->\t' + current.name + '\n')
+                self.report(prev.name + '\t->\t' + current.name +
+                            '\t|\tDistance: ' + str(current.distance_to(next)) + '\n')
 
-        return trips
+        total_distance = 0
+        for i in range(0, trips):
+            for remaining, distance in distances[i]:
+                total_distance += (trips - 1 - i + remaining) * distance
+
+        return trips, total_distance
 
 
 class MLP(Method):
@@ -155,9 +174,9 @@ def parse_file(file_name: str) -> Method:
         for i in range(8, len(data)):
             extra = [int(pos) for pos in multiple_int.split(data[i].strip())]
 
-            real_i = i - 9
+            real_i = i - 8
 
-            i_demand = demand[real_i] if real_i >= 0 else 0
+            i_demand = demand[real_i - 1] if real_i > 0 else 0
 
             if len(extra) == 2:
                 extra = ClientWithPosition(real_i, i_demand, extra[0], extra[1])
@@ -194,13 +213,16 @@ for file_name in [
     start = time.process_time()
 
     method = parse_file(file_name)
-    trips = method.run()
+
+    [trips, distance] = method.run()
 
     end = time.process_time()
 
     with open('results/' + file_name, mode='w') as file:
         file.writelines([
             'Elapsed Time: ' + str(end - start) + ' seconds\n',
-            'Total Trips: ' + str(trips) + '\n',
+            'Expected Trips: ' + str(method.trips) + '\n',
+            'Actual Trips: ' + str(trips) + '\n',
+            'Total Distance: ' + str(distance) + '\n',
             method.get_report()
         ])
