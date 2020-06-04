@@ -1,13 +1,36 @@
+from __future__ import annotations
+from typing import List
+from pathlib import Path
 import os
 import re
 import math
-from typing import List
+import time
 
 
-class Position:
-    def __init__(self, x: int, y: int):
+class Client:
+    def __init__(self, id: int, demand: int):
+        self.demand = demand
+        self.id = id
+        self.name = 'Client ' + str(self.id) if self.id > 0 else 'Deposit\t'
+
+
+class ClientWithPosition(Client):
+    def __init__(self, id: int, demand: int, x: int, y: int):
+        super().__init__(id, demand)
         self.x = x
         self.y = y
+
+    def distance_to(self, client: ClientWithPosition):
+        return math.sqrt(abs((self.x - client.x) + (self.y - client.y)))
+
+
+class ClientWithDistance(Client):
+    def __init__(self, id: int, demand: int, distances: List[int]):
+        super().__init__(id, demand)
+        self.distances = distances
+
+    def distance_to(self, client: ClientWithDistance):
+        return self.distances[client.id] if self.id is not client.id else None
 
 
 class Method:
@@ -17,42 +40,91 @@ class Method:
         self.capacity = capacity
         self.demands = demands
         self.service_time = service_time
+        self._report = ''
 
-    def run(self):
+    def report(self, line: str, new_line: bool = True):
+        if new_line:
+            self._report += '\n'
+        self._report += line
+
+    def get_report(self) -> str:
+        return self._report
+
+    def run(self) -> int:
         pass
 
 
 class MTVRP(Method):
     def __init__(self, clients: int, trips: int, capacity: int, demands: List[int], service_time: List[int],
-                 client_positions: List[Position]):
+                 client_positions: List[ClientWithPosition]):
         super().__init__(clients, trips, capacity, demands, service_time)
         self.client_positions = client_positions
 
-    @staticmethod
-    def distance(a: Position, b: Position) -> float:
-        return math.sqrt(abs((a.x - b.x) + (a.y - b.y)))
-
-    def run(self):
+    def run(self) -> int:
+        report = ''
         clients = self.client_positions
         deposit = clients.pop(0)
 
         # Start at Deposit
-        current = deposit
+        current: ClientWithPosition = deposit
+
+        trips = 1
+        capacity = self.capacity
         while len(clients) > 0:
             # Sort clients by distance to current position
-            clients = sorted(clients, key=lambda c: self.distance(current, c), reverse=True)
+            clients = sorted(clients, key=lambda c: current.distance_to(c))
 
             # Specify that the next travel position is the client with lower distance
-            next = clients.pop()
+            next: ClientWithPosition = clients[0]
 
-            # TODO: Get demand, but need to use a client id or something in the position
+            prev_capacity = capacity
+            capacity -= next.demand
 
-            # TODO: "next" is converted to "current" once we calculate demand against capacity of vehicle
+            self.report(
+                current.name + '\t->\t' + next.name +
+                '\t|\tCapacity: ' + str(prev_capacity) + ' - ' + str(next.demand) +
+                ' -> ' + str(capacity) + ' ' + ('✔️' if capacity >= 0 else '❌')
+            )
+
+            # If vehicle didn't exceed stock, remove client from pending list
+            if capacity >= 0:
+                current = clients.pop(0)
+
+            # If vehicle has no more stock, make a trip back to deposit and recalculate next route
+            if capacity <= 0:
+                prev = current
+
+                # Exceeds stock, maybe we could try to extra look for other client
+                if capacity < 0:
+                    # Restore demand to look somewhere else
+                    # Need to use 'next' because 'current' may or not be removed from list
+                    capacity += next.demand
+
+                    clients = sorted(clients, key=lambda c: (current.distance_to(c), c.demand))
+                    for candidate in clients:
+                        virtual_capacity = capacity - candidate.demand
+                        if virtual_capacity >= 0:
+                            prev_capacity = capacity
+                            capacity = virtual_capacity
+                            clients.remove(candidate)
+                            self.report(
+                                current.name + '\t->\t' + candidate.name +
+                                '\t|\tCapacity: ' + str(prev_capacity) + ' - ' + str(candidate.demand) +
+                                ' -> ' + str(capacity) + ' ' + ('✔️' if capacity >= 0 else '❌')
+                            )
+                            current = candidate
+
+                trips += 1
+                capacity = self.capacity
+                current = deposit
+                self.report(prev.name + '\t->\t' + current.name + '\n')
+
+        return trips
 
 
 class MLP(Method):
     def __init__(self, clients: int, trips: int, capacity: int, demands: List[int], service_time: List[int],
-                 travel_times: List[List[int]]):
+                 travel_times: List[ClientWithDistance]):
         super().__init__(clients, trips, capacity, demands, service_time)
         self.travel_times = travel_times
 
@@ -64,7 +136,7 @@ def parse_file(file_name: str) -> Method:
     path = 'tests/' + file_name
 
     if not os.path.exists(path):
-        raise FileNotFoundError("[Error] No se ha encontrado el archivo '" + file_name + "' en la carpeta 'tests/'")
+        raise FileNotFoundError('[Error] No se ha encontrado el archivo '" + file_name + "' en la carpeta \'tests/\'')
 
     with open(path, mode='r') as file:
         data = file.readlines()
@@ -82,17 +154,27 @@ def parse_file(file_name: str) -> Method:
         extra_data = []
         for i in range(8, len(data)):
             extra = [int(pos) for pos in multiple_int.split(data[i].strip())]
+
+            real_i = i - 9
+
+            i_demand = demand[real_i] if real_i >= 0 else 0
+
             if len(extra) == 2:
-                extra = Position(extra[0], extra[1])
+                extra = ClientWithPosition(real_i, i_demand, extra[0], extra[1])
+            else:
+                extra = ClientWithDistance(real_i, i_demand, extra)
+
             extra_data.append(extra)
 
-        if isinstance(extra_data[0], Position):
+        if isinstance(extra_data[0], ClientWithPosition):
             return MTVRP(clients, trips, capacity, demand, service_time, extra_data)
 
         return MLP(clients, trips, capacity, demand, service_time, extra_data)
 
 
-for file in [
+Path('results').mkdir(exist_ok=True)
+
+for file_name in [
     'VRPNC1m',
     'VRPNC2m',
     'VRPNC3m',
@@ -105,9 +187,20 @@ for file in [
     'MT-DMP15s0-03',
     'MT-DMP15s0-04'
 ]:
-    method = parse_file(file + '.txt')
+    file_name += '.txt'
+    if file_name[0] == 'M':
+        break
 
-    if isinstance(method, MTVRP):
-        print('File \'' + file + '\' corresponds to method MTVRP')
-    else:
-        print('File \'' + file + '\' corresponds to method MLP')
+    start = time.process_time()
+
+    method = parse_file(file_name)
+    trips = method.run()
+
+    end = time.process_time()
+
+    with open('results/' + file_name, mode='w') as file:
+        file.writelines([
+            'Elapsed Time: ' + str(end - start) + ' seconds\n',
+            'Total Trips: ' + str(trips) + '\n',
+            method.get_report()
+        ])
