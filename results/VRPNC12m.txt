@@ -1,126 +1,127 @@
-Elapsed Time: 0.010208119999999987 seconds
+Elapsed Time: 0.022824663999999995 seconds
 Expected Trips: 10
 Actual Trips: 10
-Total Distance: 7603.570536693023
+Total Distance: 46734.499677236774
 
-Deposit		->	Client 18	|	Capacity: 200 - 20 -> 180 ✔️
-Client 18	->	Client 63	|	Capacity: 180 - 50 -> 130 ✔️
-Client 63	->	Client 65	|	Capacity: 130 - 10 -> 120 ✔️
-Client 65	->	Client 74	|	Capacity: 120 - 50 -> 70 ✔️
-Client 74	->	Client 67	|	Capacity: 70 - 10 -> 60 ✔️
-Client 67	->	Client 62	|	Capacity: 60 - 20 -> 40 ✔️
-Client 62	->	Client 23	|	Capacity: 40 - 10 -> 30 ✔️
-Client 23	->	Client 72	|	Capacity: 30 - 10 -> 20 ✔️
-Client 72	->	Client 21	|	Capacity: 20 - 20 -> 0 ✔️
-Client 21	->	Deposit	
-
-Deposit		->	Client 17	|	Capacity: 200 - 20 -> 180 ✔️
-Client 17	->	Client 19	|	Capacity: 180 - 10 -> 170 ✔️
-Client 19	->	Client 13	|	Capacity: 170 - 30 -> 140 ✔️
-Client 13	->	Client 15	|	Capacity: 140 - 40 -> 100 ✔️
-Client 15	->	Client 10	|	Capacity: 100 - 10 -> 90 ✔️
-Client 10	->	Client 11	|	Capacity: 90 - 10 -> 80 ✔️
-Client 11	->	Client 16	|	Capacity: 80 - 40 -> 40 ✔️
-Client 16	->	Client 7	|	Capacity: 40 - 20 -> 20 ✔️
-Client 7	->	Client 8	|	Capacity: 20 - 20 -> 0 ✔️
-Client 8	->	Deposit	
-
-Deposit		->	Client 66	|	Capacity: 200 - 10 -> 190 ✔️
-Client 66	->	Client 20	|	Capacity: 190 - 10 -> 180 ✔️
-Client 20	->	Client 22	|	Capacity: 180 - 20 -> 160 ✔️
-Client 22	->	Client 26	|	Capacity: 160 - 10 -> 150 ✔️
-Client 26	->	Client 61	|	Capacity: 150 - 10 -> 140 ✔️
-Client 61	->	Client 69	|	Capacity: 140 - 10 -> 130 ✔️
-Client 69	->	Client 28	|	Capacity: 130 - 20 -> 110 ✔️
-Client 28	->	Client 64	|	Capacity: 110 - 10 -> 100 ✔️
-Client 64	->	Client 25	|	Capacity: 100 - 40 -> 60 ✔️
+Deposit		->	Client 20	|	Capacity: 200 - 10 -> 190 ✔️
+Client 20	->	Client 21	|	Capacity: 190 - 20 -> 170 ✔️
+Client 21	->	Client 22	|	Capacity: 170 - 20 -> 150 ✔️
+Client 22	->	Client 23	|	Capacity: 150 - 10 -> 140 ✔️
+Client 23	->	Client 26	|	Capacity: 140 - 10 -> 130 ✔️
+Client 26	->	Client 28	|	Capacity: 130 - 20 -> 110 ✔️
+Client 28	->	Client 27	|	Capacity: 110 - 10 -> 100 ✔️
+Client 27	->	Client 25	|	Capacity: 100 - 40 -> 60 ✔️
 Client 25	->	Client 24	|	Capacity: 60 - 10 -> 50 ✔️
-Client 24	->	Client 27	|	Capacity: 50 - 10 -> 40 ✔️
-Client 27	->	Client 30	|	Capacity: 40 - 10 -> 30 ✔️
-Client 30	->	Client 68	|	Capacity: 30 - 10 -> 20 ✔️
-Client 68	->	Client 29	|	Capacity: 20 - 10 -> 10 ✔️
-Client 29	->	Client 43	|	Capacity: 10 - 10 -> 0 ✔️
-Client 43	->	Deposit	
+Client 24	->	Client 29	|	Capacity: 50 - 10 -> 40 ✔️
+Client 29	->	Client 30	|	Capacity: 40 - 10 -> 30 ✔️
+Client 30	->	Client 34	|	Capacity: 30 - 20 -> 10 ✔️
+Client 34	->	Client 36	|	Capacity: 10 - 10 -> 0 ✔️
+Client 36	->	Deposit	
+
+Deposit		->	Client 67	|	Capacity: 200 - 10 -> 190 ✔️
+Client 67	->	Client 65	|	Capacity: 190 - 10 -> 180 ✔️
+Client 65	->	Client 63	|	Capacity: 180 - 50 -> 130 ✔️
+Client 63	->	Client 62	|	Capacity: 130 - 20 -> 110 ✔️
+Client 62	->	Client 66	|	Capacity: 110 - 10 -> 100 ✔️
+Client 66	->	Client 69	|	Capacity: 100 - 10 -> 90 ✔️
+Client 69	->	Client 68	|	Capacity: 90 - 10 -> 80 ✔️
+Client 68	->	Client 64	|	Capacity: 80 - 10 -> 70 ✔️
+Client 64	->	Client 61	|	Capacity: 70 - 10 -> 60 ✔️
+Client 61	->	Client 72	|	Capacity: 60 - 10 -> 50 ✔️
+Client 72	->	Client 74	|	Capacity: 50 - 50 -> 0 ✔️
+Client 74	->	Deposit	
 
 Deposit		->	Client 5	|	Capacity: 200 - 10 -> 190 ✔️
-Client 5	->	Client 14	|	Capacity: 190 - 10 -> 180 ✔️
-Client 14	->	Client 3	|	Capacity: 180 - 10 -> 170 ✔️
-Client 3	->	Client 9	|	Capacity: 170 - 10 -> 160 ✔️
-Client 9	->	Client 6	|	Capacity: 160 - 20 -> 140 ✔️
-Client 6	->	Client 4	|	Capacity: 140 - 10 -> 130 ✔️
-Client 4	->	Client 12	|	Capacity: 130 - 20 -> 110 ✔️
-Client 12	->	Client 75	|	Capacity: 110 - 20 -> 90 ✔️
-Client 75	->	Client 80	|	Capacity: 90 - 10 -> 80 ✔️
-Client 80	->	Client 1	|	Capacity: 80 - 10 -> 70 ✔️
-Client 1	->	Client 2	|	Capacity: 70 - 30 -> 40 ✔️
-Client 2	->	Client 90	|	Capacity: 40 - 10 -> 30 ✔️
-Client 90	->	Client 79	|	Capacity: 30 - 10 -> 20 ✔️
-Client 79	->	Client 77	|	Capacity: 20 - 10 -> 10 ✔️
-Client 77	->	Client 81	|	Capacity: 10 - 30 -> -20 ❌
-Client 77	->	Client 91	|	Capacity: 10 - 10 -> 0 ✔️
-Client 91	->	Deposit	
+Client 5	->	Client 3	|	Capacity: 190 - 10 -> 180 ✔️
+Client 3	->	Client 7	|	Capacity: 180 - 20 -> 160 ✔️
+Client 7	->	Client 4	|	Capacity: 160 - 10 -> 150 ✔️
+Client 4	->	Client 6	|	Capacity: 150 - 20 -> 130 ✔️
+Client 6	->	Client 8	|	Capacity: 130 - 20 -> 110 ✔️
+Client 8	->	Client 9	|	Capacity: 110 - 10 -> 100 ✔️
+Client 9	->	Client 11	|	Capacity: 100 - 10 -> 90 ✔️
+Client 11	->	Client 10	|	Capacity: 90 - 10 -> 80 ✔️
+Client 10	->	Client 75	|	Capacity: 80 - 20 -> 60 ✔️
+Client 75	->	Client 1	|	Capacity: 60 - 10 -> 50 ✔️
+Client 1	->	Client 2	|	Capacity: 50 - 30 -> 20 ✔️
+Client 2	->	Client 98	|	Capacity: 20 - 20 -> 0 ✔️
+Client 98	->	Deposit	
 
-Deposit		->	Client 41	|	Capacity: 200 - 10 -> 190 ✔️
-Client 41	->	Client 40	|	Capacity: 190 - 10 -> 180 ✔️
-Client 40	->	Client 47	|	Capacity: 180 - 10 -> 170 ✔️
-Client 47	->	Client 42	|	Capacity: 170 - 20 -> 150 ✔️
-Client 42	->	Client 49	|	Capacity: 150 - 10 -> 140 ✔️
-Client 49	->	Client 44	|	Capacity: 140 - 10 -> 130 ✔️
-Client 44	->	Client 46	|	Capacity: 130 - 30 -> 100 ✔️
-Client 46	->	Client 45	|	Capacity: 100 - 10 -> 90 ✔️
-Client 45	->	Client 52	|	Capacity: 90 - 10 -> 80 ✔️
-Client 52	->	Client 48	|	Capacity: 80 - 10 -> 70 ✔️
-Client 48	->	Client 50	|	Capacity: 70 - 10 -> 60 ✔️
-Client 50	->	Client 55	|	Capacity: 60 - 10 -> 50 ✔️
-Client 55	->	Client 51	|	Capacity: 50 - 10 -> 40 ✔️
-Client 51	->	Client 57	|	Capacity: 40 - 40 -> 0 ✔️
-Client 57	->	Deposit	
+Deposit		->	Client 43	|	Capacity: 200 - 10 -> 190 ✔️
+Client 43	->	Client 47	|	Capacity: 190 - 10 -> 180 ✔️
+Client 47	->	Client 49	|	Capacity: 180 - 10 -> 170 ✔️
+Client 49	->	Client 52	|	Capacity: 170 - 10 -> 160 ✔️
+Client 52	->	Client 50	|	Capacity: 160 - 10 -> 150 ✔️
+Client 50	->	Client 51	|	Capacity: 150 - 10 -> 140 ✔️
+Client 51	->	Client 48	|	Capacity: 140 - 10 -> 130 ✔️
+Client 48	->	Client 45	|	Capacity: 130 - 10 -> 120 ✔️
+Client 45	->	Client 46	|	Capacity: 120 - 30 -> 90 ✔️
+Client 46	->	Client 44	|	Capacity: 90 - 10 -> 80 ✔️
+Client 44	->	Client 42	|	Capacity: 80 - 20 -> 60 ✔️
+Client 42	->	Client 41	|	Capacity: 60 - 10 -> 50 ✔️
+Client 41	->	Client 40	|	Capacity: 50 - 10 -> 40 ✔️
+Client 40	->	Client 59	|	Capacity: 40 - 10 -> 30 ✔️
+Client 59	->	Client 57	|	Capacity: 30 - 40 -> -10 ❌
+Client 59	->	Client 55	|	Capacity: 30 - 10 -> 20 ✔️
+Client 55	->	Client 60	|	Capacity: 20 - 20 -> 0 ✔️
+Client 60	->	Deposit	
 
-Deposit		->	Client 87	|	Capacity: 200 - 20 -> 180 ✔️
-Client 87	->	Client 81	|	Capacity: 180 - 30 -> 150 ✔️
-Client 81	->	Client 86	|	Capacity: 150 - 10 -> 140 ✔️
-Client 86	->	Client 89	|	Capacity: 140 - 10 -> 130 ✔️
-Client 89	->	Client 73	|	Capacity: 130 - 10 -> 120 ✔️
-Client 73	->	Client 78	|	Capacity: 120 - 20 -> 100 ✔️
-Client 78	->	Client 76	|	Capacity: 100 - 10 -> 90 ✔️
-Client 76	->	Client 70	|	Capacity: 90 - 30 -> 60 ✔️
-Client 70	->	Client 88	|	Capacity: 60 - 30 -> 30 ✔️
-Client 88	->	Client 83	|	Capacity: 30 - 10 -> 20 ✔️
-Client 83	->	Client 84	|	Capacity: 20 - 20 -> 0 ✔️
-Client 84	->	Deposit	
-
-Deposit		->	Client 59	|	Capacity: 200 - 10 -> 190 ✔️
-Client 59	->	Client 34	|	Capacity: 190 - 20 -> 170 ✔️
-Client 34	->	Client 54	|	Capacity: 170 - 40 -> 130 ✔️
-Client 54	->	Client 36	|	Capacity: 130 - 10 -> 120 ✔️
-Client 36	->	Client 32	|	Capacity: 120 - 30 -> 90 ✔️
-Client 32	->	Client 53	|	Capacity: 90 - 20 -> 70 ✔️
-Client 53	->	Client 33	|	Capacity: 70 - 40 -> 30 ✔️
-Client 33	->	Client 31	|	Capacity: 30 - 20 -> 10 ✔️
-Client 31	->	Client 39	|	Capacity: 10 - 20 -> -10 ❌
-Client 31	->	Client 35	|	Capacity: 10 - 10 -> 0 ✔️
-Client 35	->	Deposit	
-
-Deposit		->	Client 85	|	Capacity: 200 - 30 -> 170 ✔️
-Client 85	->	Client 71	|	Capacity: 170 - 20 -> 150 ✔️
-Client 71	->	Client 82	|	Capacity: 150 - 20 -> 130 ✔️
-Client 82	->	Client 98	|	Capacity: 130 - 20 -> 110 ✔️
-Client 98	->	Client 99	|	Capacity: 110 - 10 -> 100 ✔️
-Client 99	->	Client 96	|	Capacity: 100 - 10 -> 90 ✔️
-Client 96	->	Client 100	|	Capacity: 90 - 20 -> 70 ✔️
-Client 100	->	Client 95	|	Capacity: 70 - 30 -> 40 ✔️
-Client 95	->	Client 97	|	Capacity: 40 - 30 -> 10 ✔️
-Client 97	->	Client 94	|	Capacity: 10 - 10 -> 0 ✔️
+Deposit		->	Client 90	|	Capacity: 200 - 10 -> 190 ✔️
+Client 90	->	Client 89	|	Capacity: 190 - 10 -> 180 ✔️
+Client 89	->	Client 88	|	Capacity: 180 - 30 -> 150 ✔️
+Client 88	->	Client 85	|	Capacity: 150 - 30 -> 120 ✔️
+Client 85	->	Client 84	|	Capacity: 120 - 20 -> 100 ✔️
+Client 84	->	Client 83	|	Capacity: 100 - 10 -> 90 ✔️
+Client 83	->	Client 82	|	Capacity: 90 - 20 -> 70 ✔️
+Client 82	->	Client 86	|	Capacity: 70 - 10 -> 60 ✔️
+Client 86	->	Client 87	|	Capacity: 60 - 20 -> 40 ✔️
+Client 87	->	Client 91	|	Capacity: 40 - 10 -> 30 ✔️
+Client 91	->	Client 96	|	Capacity: 30 - 10 -> 20 ✔️
+Client 96	->	Client 95	|	Capacity: 20 - 30 -> -10 ❌
+Client 96	->	Client 99	|	Capacity: 20 - 10 -> 10 ✔️
+Client 99	->	Client 94	|	Capacity: 10 - 10 -> 0 ✔️
 Client 94	->	Deposit	
 
-Deposit		->	Client 39	|	Capacity: 200 - 20 -> 180 ✔️
-Client 39	->	Client 56	|	Capacity: 180 - 30 -> 150 ✔️
-Client 56	->	Client 58	|	Capacity: 150 - 30 -> 120 ✔️
-Client 58	->	Client 37	|	Capacity: 120 - 20 -> 100 ✔️
-Client 37	->	Client 60	|	Capacity: 100 - 20 -> 80 ✔️
-Client 60	->	Client 38	|	Capacity: 80 - 30 -> 50 ✔️
-Client 38	->	Client 93	|	Capacity: 50 - 40 -> 10 ✔️
-Client 93	->	Client 92	|	Capacity: 10 - 20 -> -10 ❌
-Client 93	->	Deposit	
+Deposit		->	Client 13	|	Capacity: 200 - 30 -> 170 ✔️
+Client 13	->	Client 17	|	Capacity: 170 - 20 -> 150 ✔️
+Client 17	->	Client 18	|	Capacity: 150 - 20 -> 130 ✔️
+Client 18	->	Client 19	|	Capacity: 130 - 10 -> 120 ✔️
+Client 19	->	Client 15	|	Capacity: 120 - 40 -> 80 ✔️
+Client 15	->	Client 16	|	Capacity: 80 - 40 -> 40 ✔️
+Client 16	->	Client 14	|	Capacity: 40 - 10 -> 30 ✔️
+Client 14	->	Client 12	|	Capacity: 30 - 20 -> 10 ✔️
+Client 12	->	Client 100	|	Capacity: 10 - 20 -> -10 ❌
+Client 12	->	Client 35	|	Capacity: 10 - 10 -> 0 ✔️
+Client 35	->	Deposit	
 
-Deposit		->	Client 92	|	Capacity: 200 - 20 -> 180 ✔️
+Deposit		->	Client 32	|	Capacity: 200 - 30 -> 170 ✔️
+Client 32	->	Client 33	|	Capacity: 170 - 40 -> 130 ✔️
+Client 33	->	Client 31	|	Capacity: 130 - 20 -> 110 ✔️
+Client 31	->	Client 37	|	Capacity: 110 - 20 -> 90 ✔️
+Client 37	->	Client 38	|	Capacity: 90 - 30 -> 60 ✔️
+Client 38	->	Client 39	|	Capacity: 60 - 20 -> 40 ✔️
+Client 39	->	Client 57	|	Capacity: 40 - 40 -> 0 ✔️
+Client 57	->	Deposit	
+
+Deposit		->	Client 95	|	Capacity: 200 - 30 -> 170 ✔️
+Client 95	->	Client 97	|	Capacity: 170 - 30 -> 140 ✔️
+Client 97	->	Client 93	|	Capacity: 140 - 40 -> 100 ✔️
+Client 93	->	Client 92	|	Capacity: 100 - 20 -> 80 ✔️
+Client 92	->	Client 100	|	Capacity: 80 - 20 -> 60 ✔️
+Client 100	->	Client 81	|	Capacity: 60 - 30 -> 30 ✔️
+Client 81	->	Client 78	|	Capacity: 30 - 20 -> 10 ✔️
+Client 78	->	Client 76	|	Capacity: 10 - 10 -> 0 ✔️
+Client 76	->	Deposit	
+
+Deposit		->	Client 54	|	Capacity: 200 - 40 -> 160 ✔️
+Client 54	->	Client 56	|	Capacity: 160 - 30 -> 130 ✔️
+Client 56	->	Client 58	|	Capacity: 130 - 30 -> 100 ✔️
+Client 58	->	Client 53	|	Capacity: 100 - 20 -> 80 ✔️
+Client 53	->	Client 80	|	Capacity: 80 - 10 -> 70 ✔️
+Client 80	->	Client 79	|	Capacity: 70 - 10 -> 60 ✔️
+Client 79	->	Client 77	|	Capacity: 60 - 10 -> 50 ✔️
+Client 77	->	Client 73	|	Capacity: 50 - 10 -> 40 ✔️
+Client 73	->	Client 70	|	Capacity: 40 - 30 -> 10 ✔️
+Client 70	->	Client 71	|	Capacity: 10 - 20 -> -10 ❌
+Client 70	->	Deposit	
+
+Deposit		->	Client 71	|	Capacity: 200 - 20 -> 180 ✔️

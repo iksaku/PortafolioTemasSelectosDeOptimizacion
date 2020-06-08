@@ -10,4 +10,6 @@ class ClientWithPosition(BaseClient):
         self.y = y
 
     def distance_to(self, client: ClientWithPosition):
-        return math.sqrt(abs((self.x - client.x) + (self.y - client.y)))
+        return math.sqrt(
+            math.pow(self.x - client.x, 2) + math.pow(self.y - client.y, 2)
+        )
